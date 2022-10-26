@@ -1,0 +1,26 @@
+nome;logradouro;numero;complemento;bairro;referencia
+1;Adelcio Biazi;Rua Wellington Martins;1204;Fundos;Dom Bosco;Igreja
+2;Bento Rafael Siqueira;Rua Sergio Willians Poneli;1218;NULL;Dom Bosco;NULL
+3;Danilo César Pereira;Rua Ovídio José Francisco;789;NULL;Dom Bosco;NULL
+4;Darvin Ames;Rua Murilo Gleyson Gazzola;883;NULL;Dom Bosco;Igreja
+5;Deysiane Matos Sande;Rua Luciano Rossi;1259;NULL;Zambom;NULL
+6;Ederlon Barbosa Cruz;Rua José Rafael Pilan;207;NULL;Zambom;NULL
+7;Edinei Peres Legaspe;Rua José Eugênio de Mira;208;Fundos;Zambom;NULL
+8;Ednei Jose de Almeida Junior;Rua Jessé Italo Silva;209;NULL;Zambom;NULL
+9;Erika Arias Barrado;Rua Hiago Araujo Silva;2763;NULL;Santa Cruz;NULL
+10;Fabio Luiz de Paula;Rua Gerson Luiz Camillo;3233;NULL;Santa Cruz;NULL
+11;Fabio Serafim;Rua Gabriel Spadon de Souza;3327;NULL;Santa Cruz;NULL
+12;Gabriel Morais Silveira;Rua Fernanda Zampieri Canaver;210;NULL;Zambom;NULL
+13;Gabriel Sgorlon Tininis;Rua Felipe Gobo Bruno;211;NULL;Zambom;NULL
+14;Gabriel Spadon de Souza;Rua Fabio Serafim;212;NULL;Zambom;NULL
+15;Gerson Luiz Camillo;Rua Fabio Luiz de Paula;213;NULL;Zambom;NULL
+16;Giovani Bertolla Sampaio;Rua Ewerton José da Silva;1917;NULL;Zambom;NULL
+17;José Rafael Pilan;Rua Edinilson da Silva Vida;227;NULL;Bela Vista;NULL
+18;José Renato Paviotti;Rua Edinei Peres Legaspe;228;NULL;Bela Vista;NULL
+19;Murilo Gleyson Gazzola;Rua Denis Henrique Caixeta;238;NULL;Zambom;NULL
+20;Ovídio José Francisco;Rua Deivison Shindi Takatu;239;NULL;Dom Bosco;NULL
+21;Patrícia Fernanda da Silva Freitas;Rua Debora Barbosa Aires;240;NULL;Dom Bosco;supermercado
+22;Paula Leticia Santos Lima;Rua Darvin Ames;241;NULL;Dom Bosco;NULL
+23;Rafael Tomé de Souza;Rua Danilo César Pereira;242;NULL;Dom Bosco;NULL
+24;André Luyde da Silva Souza;Rua Ana Claudia Maciel;255;NULL;Zambom;NULL
+25;Taynara Cerigueli Dutra;Rua Bernardo Moreira Zabadal;250;NULL;Zambom;NULL
