@@ -1,9 +1,21 @@
 const fetchPokemon = () => {
-    const pokemonUrl = id => `https://pokeapi.co/api/v2/pokemon/${id}`;
-
-    for (let i = 1; i <= 150; i++){
-        pokemons.push(fetch(getPokemonUrl(i)).then(response => response.json()));
+    const promises = [];
+    for(let i = 1; i <= 150; i++) {
+    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+    promises.push(fetch(url).then((resp) => resp.json()));
     }
+
+    Promise.all(promises).then( results => {
+        const pokemon = results.map( result => ({
+            name: info.name,
+            id: info.id,
+            image: info.sprites['front_default'],
+            type: info.types.map((type) => type.type.name).join(', ')
+        }));
+        displayPokemon(pokemon);
+    });
 }
 
-fetchPokemon()
+const displayPokemon = (pokemon) => {
+
+}
