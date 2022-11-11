@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(205, 175, 175);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 40%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+span{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px;
+    color: rgb(133, 0, 0);    
+}
+
+.user, .senha{
+    width: 50%;
+    height: 10%;
+    border-radius: 10px;
+    border: 1px solid rgb(200, 200, 200);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.botao{
+    width: 45%;
+    height: 10%;
+    background-color: rgb(133, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+}
