@@ -1,82 +1,89 @@
-const poke_container = document.getElementById('poke-container');
-const pokemon_count = 204;
-const colors = {
-    fire: '#FDDFDF',
-    grass: '#DEFDE0',
-    electric: '#FCF7DE',
-    water: '#DEF2FD',
-    ground: '#F4E7DA',
-    rock: '#D5D5D4',
-    fairy: '#FCEAFF',
-    poison: '#98D7A5',
-    bug: '#F8D5A3',
+const poke_container = document.getElementById('container');
+const limitarPoke = 201;
+const cores = {
+    fire: '#F08030',
+    grass: '#78C850',
+    electric: '#F8D030',
+    water: '#6890F0',
+    ground: '#E0C068',
+    rock: '#B8A038',
+    fairy: '#EE99AC',
+    poison: '#A040A0',
+    bug: '#A8B820',
     dragon: '#97B3E6',
-    psychic: '#EAEDA1',
+    psychic: '#F85888',
     flying: '#F5F5F5',
-    fighting: '#E6E0D4',
-    normal: '#FFFFFF'
+    fighting: '#C03028',
+    normal: '#A8A878',
+    ghost: '#705898',
+    ice: '#98D8D8',
+    dragon: '#7038F8'
 }
 
 const fetchTeste = async () => {
-    for(let i =1; i <= pokemon_count; i++) {
-        await getPokemon(i)
+    for(let i = 1; i < limitarPoke; i++) {
+        await getPokemon(i);
     }
 }
+// manda e espera resposta antes de mandar dnv, p nao virar bagunça
 
 const getPokemon = async (id) => {
-    const url =`https://pokeapi.co/api/v2/pokemon/${id}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    createPokemonCard(data);
+    const api = `https://pokeapi.co/api/v2/pokemon/${id}`;
+    const resp = await fetch(api);
+    const data = await resp.json();
+    card(data);
 }
 
-const createPokemonCard = (pokemon) => {
-    
-    const pokemonInnerHTML = `
-    <div class="pokemon" style="background: ${ifzao(pokemon.types[0].type.name)} !important">
+const card = (pokemon) => {
+    const innerHTML = `
+    <div class="pokemon" style="border: 2px solid ${ifzao(pokemon.types[0].type.name)}">
         <div class="img-container">
-            <img src=${pokemon.sprites.front_default} alt="">
+            <img src=${pokemon.sprites.front_default}>
         </div>
         <div class="info">
-            <span class="number">#${pokemon.id}</span>
             <h3 class="name">${pokemon.forms[0].name}</h3>
-            <small class="type">tipo: <span>${maisTipos(pokemon.types)}</span> </small>
+            <span class="type">tipo: ${maisTipos(pokemon.types)}</span>
         </div>
-    </div>
-    `
+    </div>`
 
-    poke_container.innerHTML += pokemonInnerHTML;
+    poke_container.innerHTML += innerHTML;
 }
 
 function ifzao(type){
     if(type == "fire"){
-        return colors.fire;
+        return cores.fire;
     }else if(type == "grass") {
-        return colors.grass;
+        return cores.grass;
     }else if(type == "electric") {
-        return colors.electric;
+        return cores.electric;
     }else if(type == "water") {
-        return colors.water;
+        return cores.water;
     }else if(type == "ground") {
-        return colors.ground;
+        return cores.ground;
     }else if(type == "rock") {
-        return colors.rock;
+        return cores.rock;
     }else if(type == "fairy") {
-        return colors.fairy;
+        return cores.fairy;
     }else if(type == "poison") {
-        return colors.poison;
+        return cores.poison;
     }else if(type == "bug") {
-        return colors.bug;
+        return cores.bug;
     }else if(type == "dragon") {
-        return colors.dragon;
+        return cores.dragon;
     }else if(type == "psychic") {
-        return colors.psychic;
+        return cores.psychic;
     }else if(type == "flying") {
-        return colors.flying;
+        return cores.flying;
     }else if(type == "fight") {
-        return colors.fight;
+        return cores.fight;
+    }else if(type == "ice") {
+        return cores.ice;
+    }else if(type == "ghost") {
+        return cores.ghost;
+    }else if(type == "dragon"){
+        return cores.dragon
     }else{
-        return colors.normal;
+        return cores.normal;
     }
 }
 
@@ -87,5 +94,3 @@ function maisTipos(tipos){
         return `${tipos[0].type.name}`;
     }
 }
-
-fetchTeste();
